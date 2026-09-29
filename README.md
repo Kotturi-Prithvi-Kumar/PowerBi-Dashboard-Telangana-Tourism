@@ -1,4 +1,4 @@
-# Telangana Tourism Analysis & 2030 Projections Dashboard
+# Interactive Power BI dashboard — Telangana tourism trends with DAX forecasting to 2030
 ## Project Overview
 - This repository contains a comprehensive Power BI Business Intelligence Dashboard analyzing historical tourism patterns across the districts of Telangana, India, using open-source government datasets.
 
