@@ -1,17 +1,39 @@
-# Interactive Power BI dashboard — Telangana tourism trends with DAX forecasting to 2030
-## Project Overview
-- This repository contains a comprehensive Power BI Business Intelligence Dashboard analyzing historical tourism patterns across the districts of Telangana, India, using open-source government datasets.
+# 🗺️ Telangana Tourism Dashboard (Power BI)
 
-- The project evaluates historical footfall dynamics (2016–2019), isolates seasonal trends, ranks district performance based on domestic-to-foreign visitor ratios, and leverages Advanced DAX Time Intelligence to project tourist footfall and tourism-driven revenue forward to the year 2030.
+> Interactive Power BI dashboard analyzing tourism trends across Telangana districts — with DAX time-intelligence forecasting footfall and revenue through 2030.
 
-## Data Architecture & Schema
-domestic_visitors(2016-2019): Tracks monthly and annual domestic traveler counts, location metrics, and computed CAGR fields.
+![Dashboard](Telangana_Tourism.webp)
 
-foreign_visitors(2016-2019): Tracks international visitor arrivals, country-level allocations, and regional distributions.
+## The Problem
+How has tourism in Telangana evolved, which districts drive it, and where is it headed? Built for planners who need district-level answers, not state-level averages.
 
-Key Dimensions & Measures Included:
-district: Administrative boundary tracking (e.g., Hyderabad, Bhadradri Kothagudem, Rajanna Sircilla).
+## The Data
+Open government datasets (2016–2019):
+- `domestic_visitors(2016-2019).csv` — monthly/annual domestic traveler counts with CAGR fields
+- `foreign_visitors(2016-2019).csv` — international arrivals and country-level allocations
 
-date / month / year: Temporal alignment fields.
+## Approach
+1. **Data modeling** — star schema with district and date dimensions; relationships between domestic and foreign visitor fact tables.
+2. **DAX measures** — total footfall, domestic-to-foreign ratios, year-over-year growth, CAGR.
+3. **Time intelligence** — DAX time-intelligence functions to project tourist footfall and tourism-driven revenue forward to **2030**.
+4. **Visualization** — district map, trend lines, seasonal decomposition, district performance ranking.
 
-visitors: Primary metric aggregating visitor footfall counts.
+## Key Findings
+- [Top district by footfall — fill in]
+- [Strongest seasonal pattern — fill in]
+- [2030 projection headline number — fill in]
+
+## Tech Stack
+Power BI · DAX · Power Query · CSV
+
+## Project Structure
+```
+├── telangana tourism.pbix                          # The dashboard (open in Power BI Desktop)
+├── domestic_visitors(2016-2019).csv                 # Source data
+├── foreign_visitors(2016-2019).csv                  # Source data
+├── Telangana_Tourism.webp                           # Dashboard screenshot
+└── telangana-district-map-with-neighbour-state-vector.jpg
+```
+
+## How to Run
+Open `telangana tourism.pbix` in Power BI Desktop. Refresh against the CSVs if you move them.
